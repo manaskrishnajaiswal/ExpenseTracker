@@ -7,7 +7,7 @@ import { useNavigation } from "@react-navigation/native";
 const ExpenseItem = ({ description, amount, date }) => {
   const navigation = useNavigation();
   function expensePressHandler() {
-    navigation.navigate("ManageExpense");
+    navigation.navigate("ManageExpense", { expenseId: id });
   }
   return (
     <Pressable
